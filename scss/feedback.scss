@@ -1,0 +1,28 @@
+.feedback {
+    padding: 60px 0;
+    @media screen and (max-width: 992px) {
+        padding: 30px 0;
+    }
+    &__title {
+        margin-bottom: 22px;
+        //font-size: 32px;
+        //font-weight: 600;
+        //line-height: 1.5;
+        //color: #FFFFFF;
+    }
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
+    &__block { /*переименовано с контейнера на блок*/
+        margin: 0 auto; /*Добавлено*/
+        background-color: #292C36;
+        text-align: center;
+        padding: 90px 0 75px;
+        @media screen and (max-width: 992px) {
+            padding: 40px;
+        }
+        border-radius: 12px;
+        max-width: 980px;
+    }
+}

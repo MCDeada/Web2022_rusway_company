@@ -1,0 +1,124 @@
+.header {
+    position: absolute;/* фиксированная сверху позиция */
+    left: 0;
+    top: 20px;
+    width: 100%;
+    z-index: 99;
+    &__list {
+        padding: 19px 19px;
+        width: 64px;
+        height: 58px;
+        @media screen and (max-width: 992px) {
+            padding: 11.5px 11.5px;
+            width: auto;
+            height: auto;
+        }
+        align-self: center;
+        margin-left: 6px;
+        &__image {
+            display: block;
+            margin: 0;
+            & > img {
+                width: 26px;
+                height: 20px;
+            }
+        }
+    }
+    &__row {
+        display: flex;       /* Мощный инструмент для размещения*/
+        align-items: center; /* Выравнивание элементов по оси Y */
+        position: relative;
+    }
+    &__logo {
+        display: flex;        /* Чтобы высота картинки и текста не разъезжались*/
+        margin-left: 35px;
+        min-width: 150px;
+        @media screen and (max-width: 750px) {
+            margin-left: 20px;
+        }
+        @media screen and (max-width: 475px) {
+            margin-left: 10px;
+        }
+        & > img {
+            width: 100%;
+            min-height: 30px;
+        }
+    }
+    &__geo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+        @media screen and (max-width: 750px) {
+            margin-left: 25px;
+        }
+        @media screen and (max-width: 475px) {
+            margin-left: 15px;
+        }
+        cursor: pointer;
+        &__city {
+            font-size: 16px;
+            font-weight: 400;
+            color:#FFFFFF;
+            line-height: 1.25;
+        }
+        & > img {
+            margin-right: 7px;
+            width: 30px;
+            height: 30px;
+            @media screen and (max-width: 580px) {
+                display: none;
+            }
+        }
+    }
+    &__number {
+        display: block;
+        min-width: 171px;
+        margin-left: 41px;
+        @media screen and (max-width: 750px) {
+            margin-left: 25px;
+        }
+        @media screen and (max-width: 580px) {
+            display: none;
+        }
+        font-weight: 700;
+        color: #FFFFFF;  
+    }
+}
+
+.nav { 
+    width: 42%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 19px 40px 19px 27px;
+    border-left:  #FFFFFF 1px solid;
+    border-right: #FFFFFF 1px solid;
+    margin-left: 24px;
+    &__link {
+        color: #FFFFFF;
+        @media screen and (max-width: 1100px) {
+            display: col;
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            };
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        border: none;
+        padding: 15px;
+        margin: 0;
+        flex-direction: column;
+        width: auto;
+        text-align: left;
+        position: absolute;
+        top: 50px;
+        left: 50px; /* смещает на 50% без учета длины самого смещаемого блока*/
+        transform: translateX(-50%) translateY(-200px); /* смещает на -50% от длины самого смещаемого блока по оси X (влево)*/
+        transition: 0.5s transform;
+        &--active {
+            transform: translateX(-50%); /* смещает на -50% от длины самого смещаемого блока по оси X (влево)*/
+        }    
+    }
+}

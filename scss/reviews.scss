@@ -1,0 +1,129 @@
+.reviews {
+    &__container {
+        padding: 80px 0;
+    }
+    &__title {
+        margin-bottom: 60px;
+    }
+    &__wrapper {
+        margin-bottom: 30px;
+    }
+    &__grid {
+        &__elem {
+            display: flex;
+            flex-direction: column; /* каждый item есть колонка*/
+            height: auto; /* высота каждой колонки равна наибольшей в ряду*/
+            padding: 31px 30px;
+            border: #DDDDDD 1px solid;
+            &__title {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                margin-bottom: 14px;
+                &__circle {
+                    line-height: 0;
+                    margin: 0;
+                    margin-right: 32px;
+                    border: #005CCE 1px solid;
+                    border-radius: 35px;
+                }
+                &__circle__1 {
+                    padding: 11.5px;
+                    & > img {
+                        margin: 0;
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                &__circle__2 {
+                    padding: 23px 4.5px;
+                    & > img {
+                        margin: 0;
+                        width: 64px;
+                        height: 27px;
+                    }
+                }
+                &__circle__3 {
+                    padding: 19.5px 5.5px;
+                    & > img {
+                        margin: 0;
+                        width: 62px;
+                        height: 34px;
+                    }
+                }
+                &__another {
+                    display: grid;
+                    grid-template-rows: auto auto;
+                    gap: 15px;
+                    & > p {
+                        &:nth-child(2) {
+                            color: #005CCE;
+                        }
+                    }
+                }
+                
+            }
+            &__text {
+                display: block;
+                height: 238px;
+                margin: 0;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            &__footer {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: auto auto;
+                align-items: center;
+                row-gap: 8px;
+                & > img {
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    margin: 0;
+                    width: 50px;
+                    height: 50px;
+                }
+                & > p {
+                    display: block;
+                    margin: 0;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.2142;
+                    color: #B0B0B0;
+                }
+            }
+        }
+    }
+    &__arrows {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        margin-bottom: 30px;
+        line-height: 0;
+        & > img {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            &:first-child {
+                margin-right: 60px;
+            }
+        } 
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        & > button {
+            &:first-child {
+                padding: 20px 50px;
+                margin-right: 30px;
+            }
+            &:last-child {
+                padding: 20px 32px;
+                border: #DB2F09 1px solid;
+                color:#000000;
+                background-color: #FFFFFF;
+            }
+        }
+    }
+}

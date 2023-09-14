@@ -1,0 +1,91 @@
+.about {
+    padding: 80px 0;
+    @media screen and (max-width: 992px) {
+        padding: 50px 0;
+    }
+    @media screen and (max-width: 500px) {
+        padding: 40px 0;
+    }
+    background-image: url(../images/Stock_image_about.svg);
+    background-repeat: no-repeat;
+    &__row {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(4, auto);
+        @media screen and (max-width: 992px) {
+            flex-wrap: wrap; /* позволяет перестроить два строчных элемента в столбец, если использовался flex*/
+        }
+    }
+    &__title {
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin: 0;
+        margin-bottom: 60px;
+        @media screen and (max-width: 992px) {
+            margin-bottom: 22px;
+        }
+        @media screen and (max-width: 475px) {
+            margin-bottom: 15px;
+        }
+        color: #FFFFFF;
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        @media screen and (max-width: 992px) {
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 10px;
+        }
+        @media screen and (max-width: 475px) {
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(1, 100%);
+            row-gap: 10px;
+        }
+        &__title {
+            margin-bottom: 16px;
+            color: #FFFFFF;
+        }
+        &__elem {
+            display: block;
+            text-align: center;
+            @media screen and (max-width: 475px) {
+                height: 75px;
+            }
+            //height: 160px;
+            &:not(:first-child) {
+                border-left: #808080 1px solid;
+                padding-left: 15px;
+                @media screen and (max-width: 475px) {
+                    border-left: none;
+                }
+            }
+            &:nth-child(3) {
+                @media screen and (max-width: 992px) {
+                    border-left: none;
+                }
+            }
+            &__number {
+                display: block;
+                font-weight: 700;
+                font-size: 64px;
+                @media screen and (max-width: 992px) {
+                    font-size: 48px;
+                }
+                @media screen and (max-width: 475px) {
+                    font-size: 32px;
+                }
+                line-height: 1.21875;
+                margin: 0;
+                margin-bottom: 16px;
+                color: #FFFFFF;
+            }
+            &__subtitle {
+                display: block;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

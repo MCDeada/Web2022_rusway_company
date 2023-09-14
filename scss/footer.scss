@@ -1,0 +1,81 @@
+.footer {
+    padding-top: 60px;
+    background-color: #2f414f;
+    &__row {
+        padding: 40px 0 45px;
+        color: #FFFFFF;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        @media screen and (max-width: 560px) {
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: repeat(2, auto);
+            row-gap: 50px;
+        }
+        gap: 10px;
+        justify-content: space-between;
+        margin-bottom: 55px;
+        &__column {
+            line-height: 0;
+            width: auto; 
+            &__image {
+                display: block;
+                margin: 0;
+                width: 100%;
+                margin-bottom: 32px;
+                & > img {
+                    max-width: 226px;
+                }
+            }   
+            &__title {
+                margin-bottom: 24px;
+                &__first {
+                    margin-bottom: 31px;
+                }
+            }
+            &__subtitle {
+                font-weight: 400;
+                color: #FFFFFF;
+                &__smaller {
+                    font-size: 16px;
+                    line-height: 1.25;
+                    @media screen and (max-width: 992px) {
+                        font-size: 13px;
+                    }
+                    @media screen and (max-width: 475px) {
+                        font-size: 11px;
+                    }
+                }
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+    &__lastrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 0;
+        &__copyright {
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+        &__credits {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & > p {
+                font-weight: 400;
+                color: #FFFFFF;
+                margin-right: 5px;
+            }
+            & > img {
+                margin: 0;
+                width: 40px;
+                height: 32px;
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+@import "_mixins";
+@import "fonts";
+
+*,
+*::before,
+*::after {
+    font-family: Montserrat;
+    line-height: 1; /*54px при 1 будет отображаться как 54px. У разных тегов этот параметр может быть разным, поэтому тут унифицируется*/
+    outline: none; /*Свойство отвечающее за скрытие обводки, у элемента с которым взаимодействует мышка. Поэтому нужно убрать его отображение*/
+    box-sizing: border-box; /*все внутренние отступы суммировать с задаными расстояниями */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+}
+
+.h2-title {
+    display: block;
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.23; /*значение для перерасчета до 59*/
+    //letter-spacing: 5px; /*расстояние между буквами*/
+    //text-transform: uppercase;
+    color: #000000;
+    @media screen and (max-width: 992px) {
+        font-size: 36px;
+    }
+    @media screen and (max-width: 475px) {
+        font-size: 24px;
+    }
+}
+
+.h2-subtitle {
+    display: block;
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.222;
+    color: #000000;
+    @media screen and (max-width: 992px) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: 475px) {
+        font-size: 12px;
+    }
+}
+
+.h3-title {
+    display: block;
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.225; /*значение для перерасчета до 59*/
+    //letter-spacing: 5px; /*расстояние между буквами*/
+    //text-transform: uppercase;
+    color: #000000;
+    @media screen and (max-width: 992px) {
+        font-size: 30px;
+    }
+    @media screen and (max-width: 475px) {
+        font-size: 20px;
+    }
+}
+
+.h3-subtitle {
+    display: block;
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2083;
+    color: #FFFFFF;
+    @media screen and (max-width: 992px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 475px) {
+        font-size: 14px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.222;
+    border: none;
+    background-color: #DB2F09;
+    color:#FFFFFF;
+    transition: 0.3s background;
+    &:hover {
+        background-color:#ff683a;
+    }
+    @media screen and (max-width: 992px) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: 475px) {
+        font-size: 12px;
+    }
+}
+
+a,
+a:hover {
+    text-decoration: none; /*убираем подчеркивание*/
+}
+
+.container { /*обычно контейнеры ярко выражены в дизайне, и используются, чтобы компоновать блоки. Это то, что между пустыми отступами по краями*/
+    //@include container;
+    max-width: 1261px; /*слева справа отступ по 15px + основная часть 1180*/
+    margin: 0 auto; /*центрируем блок*/
+    padding: 0 15px;
+}
+
+img {
+    width: 100%; /*изображения будут адаптивными, то есть будут занимать 100% возможного пр-ва и будут сохранять пропорции*/
+}
+
+/*.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__item {
+        display: flex;
+        text-align: center;
+        width: 42px;
+        height: 42px;
+        transition: 0.3s transform;
+        &:hover {
+            transform: translateY(-10px);
+        }
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}*/

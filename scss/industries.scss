@@ -1,0 +1,95 @@
+.industries {
+    &__container {
+        padding: 0;
+        max-width: 100%;
+    }
+    &__row {
+        background-color: #B0B0B0;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        @media screen and (max-width: 955px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(8, 1fr); 
+        }
+        @media screen and (max-width: 480px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(16, 1fr); 
+        }
+        &__elem {
+            height: 280px;
+            margin: 0;
+            line-height: 0;
+            text-align: center;
+            &:nth-child(1) {
+                border-top: #B0B0B0 1px solid;
+                border-left: #B0B0B0 1px solid;
+                background-color: #005CCE;
+            }
+            &:nth-child(2) {
+                background-image: url(../images/Engineering_industries.svg);
+            }
+            &:nth-child(3) {
+                background-image: url(../images/Construction_industries.svg);
+            }
+            &:nth-child(4) {
+                background-image: url(../images/Oil_and_gas_industries.svg);
+            }
+            &:nth-child(5) {
+                background-image: url(../images/Science_industries.svg);
+            }
+            &:nth-child(6) {
+                background-image: url(../images/Information_industries.svg);
+            }
+            &:nth-child(7) {
+                background-image: url(../images/Marketing_industries.svg);
+            }
+            &:nth-child(8) {
+                background-image: url(../images/Energy_industries.svg);
+            }
+            &:nth-child(9) {
+                background-image: url(../images/Culture_industries.svg);
+            }
+            &:nth-child(10) {
+                background-image: url(../images/Trade_industries.svg);
+            }
+            &:nth-child(11) {
+                background-image: url(../images/Logistics_industries.svg);
+            }
+            &:nth-child(12) {
+                background-image: url(../images/Mech_industries.svg);
+            }
+            &:nth-child(13) {
+                background-image: url(../images/Metal_industries.svg);
+            }
+            &:nth-child(14) {
+                background-image: url(../images/Food_industries.svg);
+            }
+            &:nth-child(15) {
+                background-image: url(../images/Light_industries.svg);
+            }
+            &:nth-child(16) {
+                background-color: #005CCE;
+                border: #B0B0B0 1px solid;
+            }
+            &__fake {
+                margin: 60px 0;
+                width: 60px;
+                height: 60px;
+            }
+            & > img {
+                margin: 60px 0;
+                width: 60px;
+                height: 60px;
+            }
+            &__subtitle {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 1.2;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
